@@ -1,11 +1,14 @@
 # compute five-number summary
 fivenum <- function(x) {
-  
+  # handle non-numeric input
+   if (!is.numeric(x))
+      stop("`x` must be numeric.")
+
   # handle empty input
   n <- length(x)
   if (n == 0)
      return(rep.int(NA, 5))
-  
+   
   # compute quartile indices
   n5 <- 1
   n4 <- ((n + 3) %/% 2) / 2

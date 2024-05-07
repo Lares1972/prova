@@ -5,6 +5,7 @@ on:
     branches:
     - main
     - rel-*
+    - feature/gha-pull-upstream
 
 jobs:
   initiate-pull-upstream:
